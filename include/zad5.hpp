@@ -6,4 +6,9 @@
 #include <random>
 #include <vector>
 
-// tutaj funkcja sortujTagliatelle
+template < typename T >
+auto sortujTagliatelle(T start, T finish){
+    std::sort(start,finish,[](const Tagliatelle& t1, const Tagliatelle& t2){
+        return t1.ileMaki(1)>t2.ileMaki(1);
+    });
+}
